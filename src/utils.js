@@ -1,5 +1,8 @@
 import { constructModal } from "./tile-components";
 
+const standardCollectionEndpoint = 'https://cd-static.bamgrid.com/dp-117731241344/home';
+const singleCollectionEndpoint = 'https://cd-static.bamgrid.com/dp-117731241344/sets';
+
 const handleTileClick = (e, params) => {
   e.preventDefault();
 
@@ -7,9 +10,12 @@ const handleTileClick = (e, params) => {
   if (target.className !== "tile-image") {
     return;
   }
-  constructModal(params);
 
-  console.log("clicked ", e, "\n", params);
+  constructModal(params);
 };
 
-export { handleTileClick };
+export { 
+    handleTileClick,
+    standardCollectionEndpoint,
+    singleCollectionEndpoint
+ };
