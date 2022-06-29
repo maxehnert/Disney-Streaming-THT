@@ -1,0 +1,89 @@
+body {
+  background-color: #1b1b1b;
+  color: #f1efef;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.tile-section {
+  margin-top: 2rem;
+}
+
+.tile-row {
+  display: flex;
+  grid-gap: 10px;
+  height: 175px;
+  list-style: none;
+  margin: 0;
+  overflow: scroll;
+  overflow-y: hidden;
+  padding: 0;
+}
+
+.tile-row-title {
+  margin: 0 0 5px 0;
+}
+.tile-image-wrapper {
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+}
+
+.tile-image {
+  /* 
+     * let the cover image keep its aspect ratio for now
+    width: 250px; 
+    */
+  height: 100%;
+  max-width: 250px;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+.modal {
+  background-color: rgba(0, 0, 0, 0.4);
+  display: none;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  overflow: auto;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.modal-content {
+  background-color: #1b1b1b;;
+  border: 1px solid #888;
+  display: flex;
+  flex-direction: column;
+  margin: 15% auto;
+  padding: 20px;
+  position: relative;
+  width: 80%;
+}
+
+.modal-header-image {
+    max-height: 500px;
+    object-fit: contain;
+    object-position: 50% 50%;
+}
+.modal-close {
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+
+.modal-close:before {
+  content: "\2715";
+}
+
+.modal-close:hover,
+.modal-close:focus {
+  color: #f1efef;
+  cursor: pointer;
+  text-decoration: none;
+}
